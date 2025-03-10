@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{t}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{{ favicon }}">
+  <link rel="stylesheet" href="./css/zmnebi.css">
+  <link rel="preload" href="./css/fonts/source-code-pro/WOFF2/TTF/SourceCodePro-Bold.ttf.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="./css/fonts/bpg-ingiri/bpg-ingiri-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+  {% block page_css %}{% endblock %}
+</head>
+<body>
+  <main>
+    <section style="margin-bottom: 1em;">{% block header %}{% endblock %}</section>
+    <article {% if lang %}lang="{{lang}}"{% endif %} id="top-link">
+      {% block content %}{% endblock %}
+    </article>
+  </main>
+  {% block page_js %}{% endblock %}
+</body>
+</html>
